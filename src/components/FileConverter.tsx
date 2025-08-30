@@ -463,20 +463,30 @@ export function FileConverter() {
                   )}
                 </div>
               </div>
-              <div className="flex space-x-2">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-2">
                 <Button 
                   variant="outline" 
                   size="sm" 
                   onClick={() => setShowImagePreview(!showImagePreview)}
+                  className="flex-1 sm:flex-none"
                 >
                   <Eye className="w-4 h-4 mr-2" />
                   {showImagePreview ? 'Hide' : 'View'} Image
                 </Button>
-                <Button variant="outline" size="sm" onClick={resetConverter}>
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={resetConverter}
+                  className="flex-1 sm:flex-none"
+                >
                   <RotateCcw className="w-4 h-4 mr-2" />
                   New File
                 </Button>
-                <Button size="sm" onClick={downloadFile}>
+                <Button 
+                  size="sm" 
+                  onClick={downloadFile}
+                  className="flex-1 sm:flex-none"
+                >
                   <Download className="w-4 h-4 mr-2" />
                   Download
                 </Button>
