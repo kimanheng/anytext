@@ -14,7 +14,10 @@ anytext is a modern, privacy-focused web application that uses advanced Optical 
 - **🖱️ Drag & Drop Interface** - Simply drag images into the browser for instant processing
 - **🔍 Advanced OCR** - State-of-the-art text recognition powered by Tesseract.js
 - **🌐 Multiple Image Formats** - Support for PNG, JPG, GIF, BMP, TIFF, and WebP
-- **🌍 Multi-Language Support** - Recognize text in multiple languages with high accuracy
+- **🌍 Multi-Language Support** - Support for 25+ languages including English, Spanish, French, German, Chinese, Japanese, Arabic, and more
+- **⚙️ Advanced OCR Settings** - Customizable parameters for maximum accuracy including page segmentation modes, character filtering, and preprocessing options
+- **🔍 Image Preprocessing** - Automatic contrast enhancement and grayscale conversion for improved text recognition
+- **📊 Confidence Scoring** - Real-time accuracy metrics and processing performance indicators
 - **📱 Real-Time Progress** - Watch OCR processing with live status updates and progress indicators
 - **💾 Clean Downloads** - Export extracted text as formatted .txt files
 - **🔒 Complete Privacy** - All processing happens locally in your browser
@@ -103,6 +106,28 @@ anytext prioritizes your privacy:
 | BMP | `.bmp` | Windows bitmap format |
 | TIFF | `.tiff`, `.tif` | High-quality scanned documents |
 | WebP | `.webp` | Modern web format |
+
+## 🚀 OCR Optimization Features
+
+### Multi-Language Support
+- **25+ Languages**: English, Spanish, French, German, Italian, Portuguese, Russian, Arabic, Chinese (Simplified & Traditional), Japanese, Korean, Hindi, Thai, Vietnamese, Dutch, Polish, Turkish, Hebrew, Swedish, Danish, Norwegian, Finnish, Hungarian, Czech
+- **Multi-language Mode**: Automatically detect and process text in multiple languages simultaneously
+- **Script Detection**: Support for Latin, Cyrillic, Arabic, Han, Japanese, Hangul, Devanagari, Thai, and Hebrew scripts
+
+### Advanced OCR Parameters
+- **Page Segmentation Modes**: Choose from Auto, Single Block, Single Column, Single Word, Single Line, Single Character, Sparse Text modes
+- **Character Filtering**: Blacklist unwanted characters or whitelist only specific ones
+- **Performance Tuning**: Optimized parameters for maximum accuracy and speed
+
+### Image Preprocessing
+- **Automatic Enhancement**: Contrast boost and grayscale conversion for better text recognition
+- **Configurable Contrast**: Adjustable contrast levels from 0.5x to 3.0x
+- **Smart Processing**: Fallback to original image if preprocessing fails
+
+### Quality Metrics
+- **Confidence Scoring**: Real-time accuracy percentage for each OCR operation
+- **Processing Time**: Performance metrics showing processing duration
+- **Visual Indicators**: Color-coded confidence badges (green > 80%, yellow > 60%, red ≤ 60%)
 
 ## 🎨 Screenshots
 
