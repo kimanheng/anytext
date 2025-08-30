@@ -12,9 +12,10 @@ export function Header() {
             <div className="flex items-center space-x-2">
               <img 
                 src="/favicon.png" 
-                alt="anytext logo" 
+                alt="anytext - OCR Tool Logo" 
                 className="w-8 h-8 rounded-lg"
               />
+              <h1 className="text-xl font-semibold">anytext</h1>
               <div className="flex items-center space-x-2">
                 <Badge variant="secondary" className="text-xs">Beta</Badge>
               </div>

@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://anytext.app/sitemap.xml
+
+# Block access to unnecessary files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.lock$
+Disallow: /vite.config.ts
+Disallow: /tsconfig.json
+
+# Allow important assets
+Allow: /assets/
+Allow: /public/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.ico$
+
+# Crawl-delay (optional, be respectful)
+Crawl-delay: 1
