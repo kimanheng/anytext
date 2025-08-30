@@ -5,7 +5,9 @@
 
 anytext is a modern, privacy-focused web application that uses advanced Optical Character Recognition (OCR) to extract text from images. Built with React and powered by Tesseract.js, it processes everything locally in your browser—your images never leave your device.
 
-![anytext Demo](https://via.placeholder.com/800x400/6366f1/ffffff?text=anytext+OCR+Application)
+<div align="center">
+  <img src="favicon.png" alt="anytext logo" width="120" height="120">
+</div>
 
 ## ✨ Features
 

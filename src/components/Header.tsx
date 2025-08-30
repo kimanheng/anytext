@@ -16,7 +16,6 @@ export function Header() {
                 className="w-8 h-8 rounded-lg"
               />
               <div className="flex items-center space-x-2">
-                <h1 className="tracking-tight">anytext</h1>
                 <Badge variant="secondary" className="text-xs">Beta</Badge>
               </div>
             </div>
