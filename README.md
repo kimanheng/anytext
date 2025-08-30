@@ -14,7 +14,7 @@ anytext is a modern, privacy-focused web application that uses advanced Optical 
 - **🖱️ Drag & Drop Interface** - Simply drag images into the browser for instant processing
 - **🔍 Advanced OCR** - State-of-the-art text recognition powered by Tesseract.js
 - **🌐 Multiple Image Formats** - Support for PNG, JPG, GIF, BMP, TIFF, and WebP
-- **🌍 Multi-Language Support** - Support for 25+ languages including English, Spanish, French, German, Chinese, Japanese, Arabic, and more
+- **🌍 Multi-Language Support** - Support for 26+ languages including English, Spanish, French, German, Chinese, Japanese, Arabic, Khmer, and more
 - **⚙️ Advanced OCR Settings** - Customizable parameters for maximum accuracy including page segmentation modes, character filtering, and preprocessing options
 - **🔍 Image Preprocessing** - Automatic contrast enhancement and grayscale conversion for improved text recognition
 - **📊 Confidence Scoring** - Real-time accuracy metrics and processing performance indicators
@@ -110,9 +110,9 @@ anytext prioritizes your privacy:
 ## 🚀 OCR Optimization Features
 
 ### Multi-Language Support
-- **25+ Languages**: English, Spanish, French, German, Italian, Portuguese, Russian, Arabic, Chinese (Simplified & Traditional), Japanese, Korean, Hindi, Thai, Vietnamese, Dutch, Polish, Turkish, Hebrew, Swedish, Danish, Norwegian, Finnish, Hungarian, Czech
+- **26+ Languages**: English, Spanish, French, German, Italian, Portuguese, Russian, Arabic, Chinese (Simplified & Traditional), Japanese, Korean, Hindi, Khmer, Thai, Vietnamese, Dutch, Polish, Turkish, Hebrew, Swedish, Danish, Norwegian, Finnish, Hungarian, Czech
 - **Multi-language Mode**: Automatically detect and process text in multiple languages simultaneously
-- **Script Detection**: Support for Latin, Cyrillic, Arabic, Han, Japanese, Hangul, Devanagari, Thai, and Hebrew scripts
+- **Script Detection**: Support for Latin, Cyrillic, Arabic, Han, Japanese, Hangul, Devanagari, Khmer, Thai, and Hebrew scripts
 
 ### Advanced OCR Parameters
 - **Page Segmentation Modes**: Choose from Auto, Single Block, Single Column, Single Word, Single Line, Single Character, Sparse Text modes

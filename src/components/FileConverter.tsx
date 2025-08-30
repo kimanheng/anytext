@@ -80,6 +80,7 @@ export function FileConverter() {
     { code: 'jpn', name: 'Japanese', script: 'Japanese' },
     { code: 'kor', name: 'Korean', script: 'Hangul' },
     { code: 'hin', name: 'Hindi', script: 'Devanagari' },
+    { code: 'khm', name: 'Khmer', script: 'Khmer' },
     { code: 'tha', name: 'Thai', script: 'Thai' },
     { code: 'vie', name: 'Vietnamese', script: 'Latin' },
     { code: 'nld', name: 'Dutch', script: 'Latin' },
@@ -92,7 +93,8 @@ export function FileConverter() {
     { code: 'fin', name: 'Finnish', script: 'Latin' },
     { code: 'hun', name: 'Hungarian', script: 'Latin' },
     { code: 'ces', name: 'Czech', script: 'Latin' },
-    { code: 'eng+spa+fra+deu+ita', name: 'Multi-language (Recommended)', script: 'Latin' }
+    { code: 'eng+spa+fra+deu+ita', name: 'Multi-language (Recommended)', script: 'Latin' },
+    { code: 'eng+spa+fra+deu+ita+por+rus+ara+chi_sim+chi_tra+jpn+kor+hin+khm+tha+vie+nld+pol+tur+heb+swe+dan+nor+fin+hun+ces', name: 'All Supported Languages (Auto-detect)', script: 'Universal' }
   ];
 
   const pageSegmentationModes = [
@@ -171,7 +173,8 @@ export function FileConverter() {
   const processImageWithOCR = async (file: File): Promise<{ text: string; confidence: number; processingTime: number }> => {
     const startTime = Date.now();
     
-    setProcessingStatus('Initializing OCR worker...');
+    const selectedLanguage = supportedLanguages.find(lang => lang.code === ocrSettings.language);
+    setProcessingStatus(`Initializing OCR worker for ${selectedLanguage?.name || ocrSettings.language}...`);
     const worker = await createWorker(ocrSettings.language, 1, {
       logger: (m) => {
         setProcessingStatus(m.status || 'Processing...');
@@ -247,7 +250,7 @@ export function FileConverter() {
 
 
 
-  const processFile = async (file: File) => {
+  const processFile = useCallback(async (file: File) => {
     setIsProcessing(true);
     setProcessingProgress(0);
     setProcessingStatus('');
@@ -296,7 +299,7 @@ export function FileConverter() {
       setProcessingProgress(0);
       setProcessingStatus('');
     }
-  };
+  }, [ocrSettings, supportedTypes]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -306,14 +309,14 @@ export function FileConverter() {
     if (files.length > 0) {
       processFile(files[0]);
     }
-  }, []);
+  }, [ocrSettings]);
 
   const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files && files.length > 0) {
       processFile(files[0]);
     }
-  }, []);
+  }, [ocrSettings]);
 
   const downloadFile = () => {
     if (!convertedFile) return;
@@ -375,6 +378,17 @@ export function FileConverter() {
                     <Image className="w-3 h-3 mr-1" />
                     PNG, JPG, GIF, BMP, TIFF, WebP
                   </Badge>
+                  {ocrSettings.language && (
+                    <>
+                      <Badge variant="secondary" className="border-blue-200 bg-blue-50">
+                        <Globe className="w-3 h-3 mr-1" />
+                        {supportedLanguages.find(lang => lang.code === ocrSettings.language)?.name || ocrSettings.language}
+                      </Badge>
+                      <Badge variant="outline" className="border-purple-200 bg-purple-50 text-purple-700">
+                        {supportedLanguages.find(lang => lang.code === ocrSettings.language)?.script || 'Script'}
+                      </Badge>
+                    </>
+                  )}
                 </div>
 
                 <div className="flex flex-col items-center justify-center gap-3">
