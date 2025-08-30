@@ -129,17 +129,6 @@ anytext prioritizes your privacy:
 - **Processing Time**: Performance metrics showing processing duration
 - **Visual Indicators**: Color-coded confidence badges (green > 80%, yellow > 60%, red ≤ 60%)
 
-## 🎨 Screenshots
-
-### Main Interface
-> Clean, intuitive drag-and-drop interface for easy file uploads
-
-### Processing View
-> Real-time progress tracking with detailed status updates
-
-### Results Panel
-> Extracted text with image preview and download options
-
 ## 🤝 Contributing
 
 We welcome contributions! Here's how you can help:
