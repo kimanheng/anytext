@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 
@@ -10,9 +10,11 @@ export function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <FileText className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img 
+                src="/favicon.png" 
+                alt="anytext logo" 
+                className="w-8 h-8 rounded-lg"
+              />
               <div className="flex items-center space-x-2">
                 <h1 className="tracking-tight">anytext</h1>
                 <Badge variant="secondary" className="text-xs">Beta</Badge>
